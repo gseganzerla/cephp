@@ -1,0 +1,13 @@
+services:
+  app:
+    build:
+      args:
+        - user=${DOCKER_USER}
+        - uid=${DOCKER_UID}
+      context: ./
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/app
+    env_file:
+      - .env
+    container_name: cephp
