@@ -1,0 +1,32 @@
+#!/bin/bash
+
+csfixer='/scripts/pre-commits/php-cs-fixer'
+phpstan='/scripts/pre-commits/phpstan'
+
+
+# Enable the 'set -e' option to stop execution on any error
+set -e
+
+# Function to handle script errors and display error messages
+handle_error() {
+  exit 1
+}
+
+# Trap any errors and call the 'handle_error' function
+trap 'handle_error $BASH_COMMAND' ERR
+
+scripts=($csfixer $phpstan)
+
+# Loop through the scripts and execute them one by one
+for script in "${scripts[@]}"; do
+  echo "Running $script ..."
+  ./$script
+done
+
+files=$(git diff --name-only --cached)
+
+for file in "${files[@]}"; do
+  git add $file
+done
+
+echo "All scripts executed successfully."
