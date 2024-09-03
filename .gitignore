@@ -3,6 +3,8 @@
 
 # vscode folders
 .devcontainer
+.vscode
 
 # php dependencies
 vendor/
+.phpunit.result.cache
