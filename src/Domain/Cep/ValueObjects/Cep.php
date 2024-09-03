@@ -5,7 +5,7 @@ use Stringable;
 use ValueError;
 
 
-final readonly class Cep implements Stringable
+readonly class Cep implements Stringable
 {
     public string $value;
 
