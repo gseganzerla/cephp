@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Domain\Cep\ValueObjects;
+
 use Stringable;
 use ValueError;
 

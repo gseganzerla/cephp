@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Domain\Cep\Entities;
+
 use App\Domain\Cep\ValueObjects\Cep;
 
 final readonly class Address

@@ -14,6 +14,7 @@ return (new PhpCsFixer\Config())
         'single_line_after_imports' => true,
         'blank_line_after_opening_tag' => true,
         'compact_nullable_type_declaration' => true,
+        'blank_line_after_namespace' => true,
         'nullable_type_declaration' => ['syntax' => 'question_mark'],
     ])
     ->setFinder($finder)

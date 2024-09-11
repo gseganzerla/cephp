@@ -23,10 +23,5 @@ for script in "${scripts[@]}"; do
   ./$script
 done
 
-files=$(git diff --name-only --cached)
-
-for file in "${files[@]}"; do
-  git add $file
-done
-
+git add .
 echo "All scripts executed successfully."

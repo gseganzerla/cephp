@@ -1,6 +1,7 @@
 <?php
 
 namespace Tests\Unit\Domain\Cep\Entities;
+
 use App\Domain\Cep\Entities\Address;
 use App\Domain\Cep\ValueObjects\Cep;
 use PHPUnit\Framework\Attributes\Test;
