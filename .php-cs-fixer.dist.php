@@ -12,6 +12,7 @@ return (new PhpCsFixer\Config())
         'no_unused_imports' => true,
         'ordered_imports' => true,
         'single_line_after_imports' => true,
+        'blank_line_after_namespace' => true,
         'blank_line_after_opening_tag' => true,
         'compact_nullable_type_declaration' => true,
         'blank_line_after_namespace' => true,

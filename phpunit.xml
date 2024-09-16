@@ -19,6 +19,14 @@
         <testsuite name="Unit\Domain\Cep">
             <directory>tests/Unit/Domain/Cep</directory>
         </testsuite>
+
+        <testsuite name="Unit\Application\Services\Cep">
+            <directory>tests/Unit/Application/Services/Cep</directory>
+        </testsuite>
+
+        <testsuite name="Unit\Infrastructure\RestClients">
+            <directory>tests/Unit/Infrastructure/RestClients</directory>
+        </testsuite>
     </testsuites>
 
     <!-- 
