@@ -27,6 +27,10 @@
         <testsuite name="Unit\Infrastructure\RestClients">
             <directory>tests/Unit/Infrastructure/RestClients</directory>
         </testsuite>
+
+        <testsuite name="Unit\Infrastructure\Commands\Symofny">
+            <directory>tests/Unit/Infrastructure/Commands/Symfony</directory>
+        </testsuite>
     </testsuites>
 
     <!-- 

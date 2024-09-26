@@ -7,6 +7,7 @@ use App\Application\Dtos\Address\AddressOutputDto;
 use App\Application\Dtos\Address\AddressResponseDto;
 use App\Application\Services\Cep\Contracts\CepService as CepServiceInterface;
 use App\Application\Services\RestClients\Contracts\RestClient;
+use App\Domain\Cep\ValueObjects\Cep;
 use Override;
 
 final class CepService implements CepServiceInterface
@@ -16,9 +17,10 @@ final class CepService implements CepServiceInterface
     }
 
     #[Override()]
-    public function findByCep(string $cep): AddressOutputDto
+    public function findByCep(string $cepString): AddressOutputDto
     {
-        $response = $this->restClientService->get($cep);
+        $cep = new Cep($cepString);
+        $response = $this->restClientService->get($cep->value . '/json');
 
         /**
          * @var array<string, string> $rawData

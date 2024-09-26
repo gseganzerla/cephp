@@ -33,7 +33,8 @@
     ],
     "require": {
         "symfony/serializer": "^7.1",
-        "guzzlehttp/guzzle": "^7.9"
+        "guzzlehttp/guzzle": "^7.9",
+        "symfony/console": "^7.1"
     },
     "config": {
         "allow-plugins": {

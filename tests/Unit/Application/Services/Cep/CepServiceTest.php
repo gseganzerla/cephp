@@ -28,6 +28,8 @@ final class CepServiceTest extends TestCase
     public function testFindByCep(): void
     {
         $fakeCep = "00000000";
+        $argument = "{$fakeCep}/json";
+
         $responseBody = '{
             "cep": "00000000",
             "uf": "SP",
@@ -38,7 +40,7 @@ final class CepServiceTest extends TestCase
 
         $this->restclient
             ->method('get')
-            ->with($fakeCep)
+            ->with($argument)
             ->willReturn(new Response(
                 $responseBody,
                 200
