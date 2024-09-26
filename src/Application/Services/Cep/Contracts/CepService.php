@@ -10,5 +10,5 @@ interface CepService
     /**
      * @throws InvalidArgumentException
      */
-    public function findByCep(string $cep): AddressOutputDto;
+    public function findByCep(string $cepString): AddressOutputDto;
 }

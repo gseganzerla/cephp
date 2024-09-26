@@ -25,7 +25,7 @@ readonly class Cep implements Stringable
 
     private function validate(string $value): bool
     {
-        return boolval(preg_match('/^\d{5}-\d{3}$/', $value));
+        return boolval(preg_match('/^\d{5}-?\d{3}$/', $value));
     }
 
     public function __tostring(): string
